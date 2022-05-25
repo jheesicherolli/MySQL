@@ -1,11 +1,36 @@
 CREATE DATABASE db_registro;
  USE db_registro;
  
- CREATE TABLE tb_registro;(
+ CREATE TABLE tb_registro(
    id bigint auto_increment,
+   nome varchar(25) not null,
+   série varchar(20) not null,
+   período varchar(15) not null,
+   nota decimal (5,2) not null,
    
-   
+   primary key (id)
  );
+ 
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Karen", "2ºANO", "Matutino", 5.45);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Fernanda", "5ºANO", "Matuitino", 5.6);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Amelia", "1ºANO", "Matutino", 10.0);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Gabriel", "7ºANO", "Noturno", 8.75);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Valeria", "3ºANO", "Vespertino", 6.68);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Henrique", "8ºANO", "Noturno", 9.75);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Janbo", "1ºANO", "Vespertino", 7.56);
+ INSERT INTO tb_registro(nome,série,período,nota) VALUES ("Guilherme", "9ºANO", "Matutino", 3.42);
+
+ SELECT * FROM tb_registro;
+ 
+ SELECT * FROM tb_registro WHERE nota > 7;
+ 
+ SELECT * FROM tb_registro WHERE nota < 7;
+ 
+ UPDATE tb_registro SET período = "Matutino" WHERE id = 4;
+ 
+ SELECT * FROM tb_registro WHERE id = 4;
+ 
+SELECT * FROM tb_registro;
 
 /*Atividade 03
 
