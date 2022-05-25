@@ -18,16 +18,20 @@ SELECT * FROM tb_trabalhadores;
 insert into tb_trabalhadores(nome,setor,salário,idade,ativo) values ("Francisquin", "Vendas", 1900.00, 25, true);
 insert into tb_trabalhadores(nome,setor,salário,idade,ativo) values ("Telma", "Contabilidade", 3650.56, 36, true);
 insert into tb_trabalhadores(nome,setor,salário,idade,ativo) values ("Guilhemina", "Relações Exteriores", 5700.00, 20, true);
-insert into tb_trabalhadores(nome,setor,salário,idade,ativo) values ("Jerônimo", "Atendimento ao Cliente", 1990.00, 18, true);
+insert into tb_trabalhadores(nome,setor,salário,idade,ativo) values ("Jerônimo", "Atendimento", 1990.00, 18, true);
 insert into tb_trabalhadores(nome,setor,salário,idade,ativo) values ("Euclides", "Suporte técnico", 5550.10, 45, true);
 
-SELECT * FROM tb_trabaladores WHERE salário > 2000;
+SELECT * FROM tb_trabalhadores WHERE salário > 2000;
+
 SELECT * FROM tb_trabalhadores WHERE salário < 2000;
+
 
 UPDATE tb_trabalhadores SET setor = "Gerenciamento" WHERE id=1;
 
+SELECT * FROM tb_trabalhadores;
 
-/*Atividade 1
+
+/*Atividade 01
 Crie um banco de dados para um serviço de RH de uma empresa, onde o sistema
 trabalhará com as informações dos funcionaries desta empresa.
 Crie uma tabela de funcionaries e utilizando a habilidade de abstração e determine 5
